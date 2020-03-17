@@ -4,10 +4,7 @@ let body = document.body,
     afterScreen  = document.querySelector('after-screen'),
     timer = document.querySelector('#timer'),
     reelText = document.querySelector('.start-text'),
-    startBtn = document.querySelector('#start'),
-    rollItems = document.querySelectorAll('.rolling-items__item'),
-    rollStyle = document.getElementById('roll').style,
-    rollBackground = document.querySelector('.roll__background');
+    startBtn = document.querySelector('#start');
 
     function showGame () {
         startScreen.classList.remove('show');
