@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+}
+
+body {
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+  background-color: #4F30BF;
+  color: #191340;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 414px;
+  display: flex;
+  justify-content: center;
+}
+
+.start-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 280px;
+  height: 618px;
+  padding: 48px 28px 38px 28px;
+  background-image: url(../images/background.svg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.start-screen .logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.start-screen .logo .logo-img {
+  width: 56px;
+}
+.start-screen .logo .logo-title {
+  margin-top: 10px;
+  font-size: 15px;
+  line-height: 20px;
+}
+.start-screen .task {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.start-screen .task .subtitle {
+  opacity: 0.4;
+  font-size: 13px;
+  line-height: 20px;
+}
+.start-screen .task .title {
+  font-size: 24px;
+  line-height: 32px;
+}
+.start-screen .start {
+  padding: 17px 80px;
+  border: 0;
+  border-radius: 50px;
+  align-self: center;
+  background-color: #5734E1;
+  color: #fff;
+  font-family: Manrope;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 22px;
+}
+.start-screen .about-developers .subtitle {
+  font-size: 13px;
+  line-height: 20px;
+  opacity: 0.4;
+}
+.start-screen .about-developers .developer {
+  font-size: 17px;
+  line-height: 24px;
+  color: #191340;
+}
