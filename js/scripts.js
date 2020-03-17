@@ -14,6 +14,7 @@ let body = document.body,
     startBtn.addEventListener('click', function () {
         console.log('ok');
         showGame(); 
+        startTimer();
     });
 
     function startTimer(num) {
