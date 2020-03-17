@@ -23,15 +23,12 @@ body {
     display: flex;
     justify-content: center;
 }
-.start-screen {
-    display: flex;
+.screen {
+    display: none;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     width: 280px;
-    height: 618px;
-    padding: 48px 28px 38px 28px;
-    background-image: url(../images/background.svg);
     background-size: 100% 100%;
     background-repeat: no-repeat;
         .logo {
@@ -47,7 +44,7 @@ body {
                     line-height: 20px;
                 }
         }
-        .task {
+        .text {
             margin-top: 30px;
             display: flex;
             flex-direction: column;
@@ -61,8 +58,10 @@ body {
                 line-height: 32px;
             }
         }
-        .start {
-            padding: 17px 80px;
+        .button {
+            outline: none;
+            width: 224px;
+            height: 56px;
             border: 0;
             border-radius: 50px;
             align-self: center;
@@ -85,4 +84,98 @@ body {
                 color: $text;
             }
         }
+}
+.game-screen {
+    height: 99vh;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    .score {
+        margin-top: 16px;
+        width: 178px;
+        height: 56px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 6px 26px 6px 6px;
+        border-radius: 50px;
+        background-color: #fff;
+            .logo {
+                width: 44px;
+            }
+            .meters {
+                font-size: 22px;
+                line-height: 22px;
+            }
+    }
+    .game-timer {
+        margin: 130px auto;
+        opacity: 0.2;
+        font-weight: bold;
+        font-size: 192px;
+        line-height: 100%;
+    }
+    .roll {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 100%;
+        position: absolute;
+        top: 330px;
+        z-index: 999;
+            .roll-img {
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                    .roll-peace {
+                        position: absolute;
+                        right: 0;
+                        top: 72px;
+                    }
+            }
+            .start-text {
+                position: absolute;
+                right: 12px;
+                top: 152px;
+                text-align: center;
+                max-width: 85px;
+                font-size: 18px;
+                line-height: 20px;
+            }
+    }
+}
+
+.before-screen {
+    height: 618px;
+    padding: 48px 28px 38px 28px;
+    background-image: url(../images/before-background.svg);
+}
+.after-screen {
+    height: 552px;
+    padding: 48px 25px 38px 25px;
+    background-image: url(../images/after-background.svg);
+    background-size: 100%;
+    .text {
+        .purple {
+            color: $purple;
+        }
+    }
+    .buttons{
+        margin-top: 40px;
+    }
+        .again {
+            margin-top: 10px;
+            background: rgba(87, 52, 225, 0.1);
+            color: $purple;
+        }
+}
+
+//classes for JavaScript
+.show {
+    display: flex;
+}
+
+.hide {
+    display: none;
 }

@@ -9,22 +9,61 @@
 </head>
 <body>
     <div class="wrapper">
-        <div class="start-screen">
+        <div class="before-screen screen show">
             <div class="logo">
                 <img src="images/logo.svg" alt="COVID GAMES LOGO" class="logo-img">
                 <h1 class="logo-title">COVIDGAME</h1>
             </div>
-            <div class="task">
+            <div class="text">
                 <h5 class="subtitle">Задача</h5>
                 <h2 class="title">Скрути как можно больше бумаги за 30 секунд</h2>
             </div>
-            <button class="start">Начать</button>
+            <button class="button start" id="start">Начать</button>
             <div class="about-developers">
                 <h5 class="subtitle">Разработчики</h5>
                 <a href="" class="developer">@fetchclab</a>
                 <a href="" class="developer">@DanikNewgarden</a>
             </div>
         </div>
+        <div class="game-screen">
+            <div class="score">
+                <img src="images/logo.svg" alt="COVID GAMES LOGO" class="logo">
+                <h2 class="meters">
+                    12 750 м
+                </h2>
+            </div>
+            <div class="game-timer" id="timer">
+                30
+            </div>
+            <div class="roll">
+                <div class="roll-img">
+                    <img src="images/roll.svg" alt="roll" class="main-roll">
+                    <img src="images/roll-peace.svg" alt="peace of roll" class="roll-peace">
+                </div>
+                
+                <h3 class="start-text">
+                    МОТАЙ
+                    БУМАГУ
+                </h3>
+            </div>
+        </div>
+        <div class="after-screen screen">
+            <div class="logo">
+                <img src="images/logo.svg" alt="COVID GAMES LOGO" class="logo-img">
+                <h1 class="logo-title">COVIDGAME</h1>
+            </div>
+            <div class="text">
+                <h5 class="subtitle">Результат</h5>
+                <h2 class="title">
+                    <span class="purple">12 750 метров</span> туалетной бумаги
+                </h2>
+            </div>
+            <div class="buttons">
+                <button class="button share" id="share">Поделиться</button>
+                <button class="button again" id="again">Ещё раз?</button>
+            </div>
+        </div>
     </div>
+    <script src="js/scripts.js"></script>
 </body>
 </html>

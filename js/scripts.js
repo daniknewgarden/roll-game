@@ -1,0 +1,5 @@
+let body = document.body,
+    startScreen = document.querySelector('.before-screen'),
+    gameContent = document.querySelector('.game-screen'),
+    beforeScreen  = document.querySelector('game-screen'),
+    startBtn = document.querySelector('#start'),
