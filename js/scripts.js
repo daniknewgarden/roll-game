@@ -4,10 +4,7 @@ let body = document.body,
     afterScreen  = document.querySelector('after-screen'),
     timer = document.querySelector('#timer'),
     reelText = document.querySelector('.start-text'),
-    startBtn = document.querySelector('#start'),
-    rollItems = document.querySelectorAll('.rolling-items__item'),
-    rollStyle = document.getElementById('roll').style,
-    rollBackground = document.querySelector('.roll__background');
+    startBtn = document.querySelector('#start');
 
 
 
@@ -20,7 +17,11 @@ let body = document.body,
     startBtn.addEventListener('click', function () {
         console.log('ok');
         showGame(); 
+<<<<<<< HEAD
         // startGame();
+=======
+        startTimer();
+>>>>>>> 09362c1fc82ad231fec4e5d1ac257087e1629c67
     });
 
     function startTimer(num) {
