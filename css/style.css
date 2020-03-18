@@ -104,12 +104,12 @@ body {
 }
 .game-screen .score {
   margin-top: 16px;
-  width: 178px;
+  width: 250px;
   height: 56px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 6px 26px 6px 6px;
+  padding: 6px 12px 6px 6px;
   border-radius: 50px;
   background-color: #fff;
 }
@@ -119,6 +119,12 @@ body {
 .game-screen .score .meters {
   font-size: 22px;
   line-height: 22px;
+  margin-right: 16px;
+}
+.game-screen .score .speed {
+  margin-right: 16px;
+  font-size: 15px;
+  color: #F17642;
 }
 .game-screen .game-timer {
   text-align: center;
@@ -224,7 +230,7 @@ body {
 .roll__area {
   height: 100vh;
   position: relative;
-  left: 95px;
+  left: 97px;
   top: -72px;
   overflow: hidden;
 }
