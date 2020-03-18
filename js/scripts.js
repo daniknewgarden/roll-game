@@ -1,16 +1,18 @@
 let body = document.body,
     startScreen = document.querySelector('.before-screen'),
     gameContent = document.querySelector('.game-screen'),
-    afterScreen  = document.querySelector('after-screen'),
+    afterScreen  = document.querySelector('.after-screen'),
     timer = document.querySelector('#timer'),
     reelText = document.querySelector('.start-text'),
     startBtn = document.querySelector('#start'),
+    againBtn = document.querySelector('.again'),
+    roll = document.querySelector('.roll'),
     rollItems = document.querySelectorAll('.rolling-items__item'),
     rollStyle = document.getElementById('roll').style,
     rollBackground = document.querySelector('.roll__background');
 
 
-
+    console.log(roll);
 
     function showGame () {
         startScreen.classList.remove('show');
@@ -18,9 +20,7 @@ let body = document.body,
     }
 
     startBtn.addEventListener('click', function () {
-        console.log('ok');
         showGame(); 
-        // startGame();
     });
 
     function startTimer(num) {
@@ -31,18 +31,31 @@ let body = document.body,
             num--;
             timer.textContent = num;
 
+            if (num < 6) {
+                timer.classList.add('ended');
+            }
+
             if (num < 1) {
                 clearInterval(timeInterval);
+
+                setTimeout(() => {
+                    gameContent.classList.remove('show');
+                    afterScreen.classList.add('show');
+                }, 2000);
                 console.log('ok');
             }
         }
 
     }
-
-    function startGame() {
+    reelText.addEventListener('click', function startGame() {
         reelText.classList.add('hide');
+        startRolling();
         startTimer();
-    }
+    });
+
+    againBtn.addEventListener('click', function () {
+        location.reload()
+    });
 
     function startRolling() {
         Math.lerp = function (value1, value2, amount) {
@@ -101,13 +114,6 @@ let body = document.body,
             jumpMargin = Math.lerp(jumpMargin, jumpMarginTarget, deltaTime * jumpMarginSensivity);
 
             position += velocity * deltaTime;
-            //     console.log( 'deltaTime', deltaTime );
-            //     console.log( 'velocity', velocity );
-            //     console.log( 'position', position );
-            //     console.log( 'distance', distance );
-
-            //     console.log( '---', '\n');
-
         }
 
         function draw() {
@@ -169,6 +175,5 @@ let body = document.body,
         window.requestAnimationFrame(loop);
     }
 
-    startRolling();
 
     
