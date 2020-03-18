@@ -1,5 +1,9 @@
 * {
   box-sizing: border-box;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 a {
@@ -18,6 +22,7 @@ body {
   margin: 0;
   background-color: #4F30BF;
   color: #191340;
+  overflow: hidden;
 }
 
 .wrapper {
@@ -89,11 +94,13 @@ body {
 }
 
 .game-screen {
+  width: 100%;
   height: 99vh;
   display: none;
   flex-direction: column;
   align-items: center;
   position: relative;
+  overflow: hidden;
 }
 .game-screen .score {
   margin-top: 16px;
@@ -114,41 +121,12 @@ body {
   line-height: 22px;
 }
 .game-screen .game-timer {
-  width: 223px;
   text-align: center;
   margin: 130px auto;
   opacity: 0.2;
   font-weight: bold;
   font-size: 192px;
   line-height: 100%;
-}
-.game-screen .roll {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  width: 100%;
-  position: absolute;
-  top: 330px;
-  z-index: 999;
-}
-.game-screen .roll .roll-img {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-.game-screen .roll .roll-img .roll-peace {
-  position: absolute;
-  right: 0;
-  top: 72px;
-}
-.game-screen .roll .start-text {
-  position: absolute;
-  right: 12px;
-  top: 152px;
-  text-align: center;
-  max-width: 85px;
-  font-size: 18px;
-  line-height: 20px;
 }
 
 .before-screen {
@@ -181,4 +159,95 @@ body {
 
 .hide {
   display: none;
+}
+
+* {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.game-content,
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.distance {
+  margin: 20px auto;
+  background: white;
+  padding: 8px;
+  font-family: Manrope, Inter, Montserrat, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  font-feature-settings: "tnum" on, "lnum" on;
+  line-height: 42px;
+  display: inline-flex;
+  flex-direction: row;
+  padding: 6px;
+  color: #191340;
+  border-radius: 26px;
+}
+
+.distance__icon {
+  margin-right: 16px;
+}
+
+.distance__text {
+  margin-right: 16px;
+}
+
+.distance__speed {
+  margin-right: 16px;
+  font-size: 15px;
+  color: #F17642;
+}
+
+.game-content {
+  width: 100vw;
+  height: 100vh;
+  background: #4F30BF;
+  overflow: hidden;
+}
+
+.roll {
+  position: absolute;
+  left: 50%;
+  margin-left: -108px;
+  top: 55%;
+  margin-top: -72px;
+  translate: margin-top ease 240ms;
+}
+
+.roll__area {
+  height: 100vh;
+  position: relative;
+  left: 95px;
+  top: -72px;
+  overflow: hidden;
+}
+
+.rolling-items {
+  position: absolute;
+  left: 5%;
+  max-height: 50vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.rolling-items__item {
+  margin-top: -10px;
+}
+
+.start-text {
+  position: absolute;
+  left: 55%;
+  top: 10%;
+  text-align: center;
+  max-width: 85px;
+  font-size: 18px;
+  line-height: 20px;
+  z-index: 999;
 }
