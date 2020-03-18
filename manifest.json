@@ -3,7 +3,7 @@
     "short_name": "covid19",
     "description": "Намотай как можно больше туалетной бумаги на случай полного карантина",
     "start_url": "https://covidgame.ru/",
-    "display": "standalone",
+    "display": "fullscreen",
     "orientation": "portrait",
     "lang": "Russian",
 
