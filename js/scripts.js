@@ -24,8 +24,8 @@ function SceneManager( scenes ) {
             scene.element.setAttribute( 'sm-display', (scene.name === name).toString() );
         });
 
-        if( action === 'function' ) action()
-    }
+        if( action === 'function' ) action();
+    };
 }
 
 // app variables.
@@ -45,7 +45,7 @@ function initializeApplication() {
         return {
             name: sceneName,
             element: document.getElementById( sceneName )
-        }
+        };
     });
     
     sm = new SceneManager( scenes );
@@ -56,7 +56,7 @@ function initializeApplication() {
         game();
     });
 
-    document.querySelector('.again').addEventListener( 'click', function() { location.reload() } );
+    document.querySelector('.again').addEventListener( 'click', function() { location.reload(); } );
 
 }
 
@@ -117,6 +117,8 @@ function game() {
         document.querySelector('.roll').style.marginTop = jumpMargin + 'px';
         document.getElementById('distance').innerText = Math.floor(distance).toLocaleString('ru') + ' м';
         document.getElementById('speed').innerText = Number((velocity / 1000).toFixed(1)).toLocaleString('ru') + ' м/сек';
+
+        body.style.overflow = 'hidden';
     }
 
     function startTimer(num) {
@@ -139,7 +141,7 @@ function game() {
                     let scoreResult = document.getElementById('distance').innerText;
                     resultText.textContent = parseInt(scoreResult) + ' метров';
     
-                    sm.setScene( 'results' )
+                    sm.setScene( 'results' );
     
                 }, 500);
                 

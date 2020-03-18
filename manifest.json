@@ -6,6 +6,8 @@
     "display": "fullscreen",
     "orientation": "portrait",
     "lang": "Russian",
+    "background_color": "#4F30BF",
+    "theme_color": "#4F30BF",
 
     "icons": [
         {
