@@ -7,7 +7,6 @@
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
-    overscroll-behavior-y: none;
 }
 
 img {
@@ -106,6 +105,7 @@ body {
         }
 }
 .game-screen {
+    overscroll-behavior: none;
     width: 100%;
     height: 100vh;
     display: none;
