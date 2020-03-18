@@ -7,10 +7,9 @@
 }
 
 img {
-  user-select: none;
-  -moz-user-select: none;
+  -o-user-select: none;
   -webkit-user-select: none;
-  -ms-user-select: none;
+  user-select: none;
 }
 
 a {
@@ -40,6 +39,7 @@ body {
 }
 
 .screen {
+  margin: 0 auto;
   display: none;
   flex-direction: column;
   justify-content: space-between;
@@ -158,9 +158,9 @@ body {
   overflow: hidden;
 }
 .game-screen .rolling-items {
-  position: absolute;
-  left: 5%;
-  max-height: 50vh;
+  position: relative;
+  right: 20%;
+  top: -1576px;
   display: flex;
   flex-direction: column;
 }

@@ -9,10 +9,8 @@ let body = document.body,
     roll = document.querySelector('.roll'),
     rollItems = document.querySelectorAll('.rolling-items__item'),
     rollStyle = document.getElementById('roll').style,
-    rollBackground = document.querySelector('.roll__background');
-
-
-    console.log(roll);
+    rollBackground = document.querySelector('.roll__background'),
+    resultText = document.querySelector('.purple');
 
     function showGame () {
         startScreen.classList.remove('show');
@@ -40,6 +38,11 @@ let body = document.body,
 
                 setTimeout(() => {
                     gameContent.classList.remove('show');
+
+                    let scoreResult = document.getElementById('distance').innerText;
+                    
+                    resultText.textContent = parseInt(scoreResult) + ' метров';
+
                     afterScreen.classList.add('show');
                 }, 2000);
                 console.log('ok');
@@ -47,14 +50,14 @@ let body = document.body,
         }
 
     }
-    reelText.addEventListener('click', function startGame() {
+    reelText.addEventListener('touchstart' || 'click', function startGame() {
         reelText.classList.add('hide');
         startRolling();
         startTimer();
     });
 
     againBtn.addEventListener('click', function () {
-        location.reload()
+        location.reload();
     });
 
     function startRolling() {
@@ -64,11 +67,11 @@ let body = document.body,
             return value1 + (value2 - value1) * amount;
         };
 
-
+        
 
         //  Отключить перетаскивание картинок
         rollBackground.ondragstart = function () {
-            return false;
+            return true;
         };
 
         rollItems.forEach(function (item) {
@@ -144,6 +147,7 @@ let body = document.body,
                 e = e.changedTouches[0];
             }
 
+
             swipePosition = e.clientY;
         }
 
@@ -173,6 +177,7 @@ let body = document.body,
 
         let lastRender = 0;
         window.requestAnimationFrame(loop);
+
     }
 
 
