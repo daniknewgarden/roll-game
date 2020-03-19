@@ -143,8 +143,18 @@ function game() {
                         
                     resultText.textContent = parse + ' метров';
 
-                    let stock = document.querySelector('.stock');
-                    stock.textContent = Math.round(parse / 10);
+                    let stock = document.querySelector('.stock'),
+                        numOfDays = Math.round(parse / 10),
+                        lastNum = numOfDays % 10;
+                    
+                    if (/[1]/i.test(lastNum)) {
+                        stock.textContent = numOfDays + ' день';
+                    }   else if (/[2]/i.test(lastNum) || /[3]/i.test(lastNum) || /[4]/i.test(lastNum)) {
+                        stock.textContent = numOfDays + ' дня';
+                    }   else {
+                        stock.textContent = numOfDays + ' дней';
+                    }
+                    
 
                     let link = document.getElementById('share');
                     link.href = 'https://vk.com/share.php?url=https://covidgame.ru&comment=Я намотал ' + parse + ' метров туалетной бумаги! Сможешь больше?';
