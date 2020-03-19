@@ -537,6 +537,14 @@ body {
 .after-screen .text .purple {
   color: #5734E1;
 }
+.after-screen .text .subtitle {
+  font-size: 18px;
+}
+.after-screen .text .stock-title {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #191340cb;
+}
 .after-screen .buttons {
   margin-top: 40px;
 }

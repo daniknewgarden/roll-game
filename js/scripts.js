@@ -138,9 +138,17 @@ function game() {
                 clearInterval(timeInterval);
     
                 setTimeout(() => {
-                    let scoreResult = document.getElementById('distance').innerText;
-                    resultText.textContent = parseInt(scoreResult) + ' метров';
-    
+                    let scoreResult = document.getElementById('distance').innerText,
+                        parse = parseInt(scoreResult);
+                        
+                    resultText.textContent = parse + ' метров';
+
+                    let stock = document.querySelector('.stock');
+                    stock.textContent = Math.round(parse / 10);
+
+                    let link = document.getElementById('share');
+                    link.href = 'https://vk.com/share.php?url=https://covidgame.ru&comment=(Я намотал ' + parse + ' метров туалетной бумаги! Сможешь больше?';
+
                     sm.setScene( 'results' );
     
                 }, 500);
@@ -153,7 +161,7 @@ function game() {
     function onDragStart(e) {
 
         if( !isGame ) {
-            startTimer( 30 );
+            startTimer( 5 );
             isGame = true;
         }
 
