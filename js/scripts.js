@@ -147,7 +147,7 @@ function game() {
                     stock.textContent = Math.round(parse / 10);
 
                     let link = document.getElementById('share');
-                    link.href = 'https://vk.com/share.php?url=https://covidgame.ru&comment=(Я намотал ' + parse + ' метров туалетной бумаги! Сможешь больше?';
+                    link.href = 'https://vk.com/share.php?url=https://covidgame.ru&comment=Я намотал ' + parse + ' метров туалетной бумаги! Сможешь больше?';
 
                     sm.setScene( 'results' );
     
@@ -161,7 +161,7 @@ function game() {
     function onDragStart(e) {
 
         if( !isGame ) {
-            startTimer( 5 );
+            startTimer( 30 );
             isGame = true;
         }
 
