@@ -119,6 +119,7 @@ function game() {
         document.getElementById('speed').innerText = Number((velocity / 1000).toFixed(1)).toLocaleString('ru') + ' м/сек';
 
         body.style.overflow = 'hidden';
+        body.style.webkitOverflowScrolling = 'touch';
     }
 
     function startTimer(num) {

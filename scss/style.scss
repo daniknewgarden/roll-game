@@ -32,6 +32,10 @@ body {
     background-color: #4F30BF;
     color: $text;
 }
+html,
+body {
+    position: relative;
+}
 .wrapper {
     margin: 0 auto;
     display: flex;
