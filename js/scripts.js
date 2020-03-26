@@ -111,6 +111,19 @@ function game() {
     
         position += velocity * deltaTime;
     }
+
+    function unlockScroll() {
+        const scrollY = document.body.style.top;
+        document.body.style.position = '';
+        document.body.style.top = '';
+        window.scrollTo(0, parseInt(scrollY || '0') * -1);
+    };
+
+    function lockScroll() {
+        document.body.style.position = 'fixed';
+        document.body.style.top = `-${window.scrollY}px`;
+        document.body.style.width = '100%'
+    };
     
     function draw() {
         rollStyle.top = position + 'px';
@@ -118,8 +131,7 @@ function game() {
         document.getElementById('distance').innerText = Math.floor(distance).toLocaleString('ru') + ' м';
         document.getElementById('speed').innerText = Number((velocity / 1000).toFixed(1)).toLocaleString('ru') + ' м/сек';
 
-        body.style.overflow = 'hidden';
-        body.style.webkitOverflowScrolling = 'touch';
+        lockScroll();
     }
 
     function startTimer(num) {
@@ -139,6 +151,8 @@ function game() {
                 clearInterval(timeInterval);
     
                 setTimeout(() => {
+                    unlockScroll()
+
                     let scoreResult = document.getElementById('distance').innerText,
                         parse = parseInt(scoreResult);
                         
