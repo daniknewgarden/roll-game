@@ -502,13 +502,13 @@ body {
 .game-screen .roll__area {
   height: 100vh;
   position: relative;
-  left: 97px;
+  left: 108px;
   top: -72px;
   overflow: hidden;
 }
 .game-screen .rolling-items {
   position: relative;
-  right: 20%;
+  right: 50%;
   top: -1576px;
   display: flex;
   flex-direction: column;
